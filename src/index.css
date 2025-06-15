@@ -1,0 +1,105 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 300 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 300 100% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #111111;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #FF00FF;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00FFFF;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px #FF00FF80;
+  }
+
+  .cyber-border {
+    border: 1px solid #FF00FF40;
+    box-shadow: 0 0 20px #FF00FF20;
+  }
+
+  .cyber-button {
+    @apply bg-transparent border-2 border-cyber-pink text-cyber-pink px-6 py-3 font-mono font-semibold uppercase tracking-wider transition-all duration-300 hover:bg-cyber-pink hover:text-black hover:shadow-lg;
+    box-shadow: 0 0 20px #FF00FF40;
+  }
+
+  .cyber-button:hover {
+    box-shadow: 0 0 30px #FF00FF60;
+  }
+
+  .project-card {
+    @apply bg-dark-gray border cyber-border rounded-lg p-6 transition-all duration-300 hover:scale-105 hover:border-cyber-cyan;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 0 30px #00FFFF20;
+  }
+}
