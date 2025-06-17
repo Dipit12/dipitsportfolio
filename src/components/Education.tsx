@@ -11,7 +11,7 @@ const Education: React.FC = () => {
       cgpa: '8.5+',
       status: 'current',
       description: 'Specializing in Full Stack Development, Data Structures & Algorithms, and Modern Web Technologies.',
-      highlights: ['Dean\'s List', 'GDSC Member', 'Active in Tech Communities']
+      highlights: ['GDSC Member', 'Active in Tech Communities']
     },
     {
       institution: 'Presidium, Gurgaon',
